@@ -1,0 +1,6 @@
+{
+  "name": "دعوة زفاف عيسى ومرام",
+  "description": "دعوة زفاف ملكية فاخرة وتفاعلية لعيسى ومرام بتصميم بستاني راقي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
