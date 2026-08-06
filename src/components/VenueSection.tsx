@@ -1,10 +1,10 @@
 import React from 'react';
-import { MapPin, Navigation, Calendar, Clock, Car, PhoneCall, ExternalLink, Sparkles } from 'lucide-react';
+import { MapPin, Navigation, Calendar, Clock, Car, Sparkles } from 'lucide-react';
 
 export const VenueSection: React.FC = () => {
   const venueName = "قصر الفردوس الملكي للمناسبات";
   const venueAddress = "شارع التسعين الشمالي، التجمع الخامس، القاهرة الجديدة، مصر";
-  const mapUrl = "https://maps.google.com/?q=New+Cairo+Egypt";
+  const mapUrl = "https://maps.app.goo.gl/NewCairoEgypt"; // Update with your exact map pin if needed
 
   const handleOpenMaps = () => {
     window.open(mapUrl, '_blank', 'noopener,noreferrer');
@@ -96,23 +96,25 @@ export const VenueSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Visual Map Stylized Preview Card */}
+            {/* Interactive Google Maps Embed Preview Card */}
             <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-[#d4af37]/40 shadow-inner group">
-              <img
-                src="/src/assets/images/royal_garden_bg_1786014169472.jpg"
-                alt="قصر الفردوس"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-6 text-white text-right">
-                <div className="flex items-center gap-2 text-[#fcf6ba] font-bold text-sm mb-1 font-tajawal">
-                  <MapPin className="w-5 h-5 text-[#d4af37] animate-bounce" />
+              <iframe
+                title="Google Maps Location Preview"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4!2d31.4165!3d30.0165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVFJFVUZJTFMgUEFMQUNF!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
+              <div className="absolute bottom-3 right-3 left-3 bg-black/60 backdrop-blur-md p-3 rounded-xl text-white text-right border border-white/10 pointer-events-none">
+                <div className="flex items-center gap-2 text-[#fcf6ba] font-bold text-sm mb-0.5 font-tajawal">
+                  <MapPin className="w-4 h-4 text-[#d4af37] animate-bounce" />
                   <span>القاهرة الجديدة</span>
                 </div>
-                <h4 className="font-amiri text-2xl font-bold">بوابة كبار الزوار رقم ١</h4>
-                <p className="font-tajawal text-xs text-white/80 mt-1">
-                  انقر فوق الزر أعلاه لتتبع المسار المباشر بخرائط جوجل
-                </p>
+                <h4 className="font-amiri text-lg font-bold">شارع التسعين الشمالي - التجمع الخامس</h4>
               </div>
             </div>
           </div>
