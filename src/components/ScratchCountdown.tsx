@@ -140,10 +140,10 @@ const ScratchCircleCard: React.FC<ScratchCircleProps> = ({ label, hiddenValue })
       </span>
 
       {/* Circle Container holding the hidden value and the scratch canvas */}
-      <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full border-4 border-[#D4AF37] bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] shadow-[0_0_35px_rgba(212,175,55,0.45)] flex items-center justify-center overflow-hidden transition-transform hover:scale-105">
+      <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full border-4 border-[#D4AF37] bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#B8860B] shadow-[0_0_35px_rgba(212,175,55,0.45)] flex items-center justify-center overflow-hidden transition-transform hover:scale-105">
         {/* Hidden Number underneath */}
         <div className="absolute inset-0 flex items-center justify-center p-2 text-center bg-white/95">
-          <span className="font-amiri text-5xl sm:text-6xl font-bold text-[#0A1128] drop-shadow-sm">
+          <span className="font-amiri text-4xl sm:text-5xl font-bold text-[#0A1128] drop-shadow-sm">
             {hiddenValue}
           </span>
         </div>
@@ -222,8 +222,8 @@ export const ScratchCountdown: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Large Scratch Circles for Day, Month, Year */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center mb-16">
+        {/* 3 Horizontal Scratch Circles for Day, Month, Year */}
+        <div className="flex flex-row flex-wrap items-center justify-center gap-6 sm:gap-10 mb-16">
           <ScratchCircleCard label="اليوم" hiddenValue="13" />
           <ScratchCircleCard label="الشهر" hiddenValue="9" />
           <ScratchCircleCard label="السنة" hiddenValue="2026" />
